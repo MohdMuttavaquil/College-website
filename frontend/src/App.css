@@ -1,0 +1,92 @@
+.card1 {
+    animation: slideLeft 0.7s ease-out forwards; 
+}
+
+.card2 {
+    animation: slideUp 0.7s ease-out forwards; 
+}
+
+.card3 {
+   animation: slideDown 0.7s ease-out forwards; 
+}
+
+
+.card4 {
+  animation: slideRight 0.7s ease-out forwards; 
+} 
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    70%{
+        opacity: .7;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(-400px);
+        opacity: 0;
+    }
+
+    70%{
+        opacity: .7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+
+    70% {
+        opacity: .7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    70% {
+        opacity: .7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.typing{
+    width: 50;
+    animation: typing 3s steps(50), .5s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+ @keyframes typing {
+    from { width: 0 }
+    to { width: 50ch }
+  }
+
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}

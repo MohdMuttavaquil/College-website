@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+    .date {
+        @apply bg-[#812972] text-white h-[4rem] w-[4rem] ml-3 mt-2 text-center;
+    }
+
+   .mut{
+        @apply h-40 text-white bg-blue-300
+    }
+}
