@@ -11,7 +11,9 @@ const Payment = () => {
         formState: { errors, isSubmitting },
     } = useForm()
 
-    const url = "http://localhost:3000"
+   // const url = "http://localhost:3000"
+
+   const url = "https://college-website-beckend.onrender.com"
 
     const onSubmit = async (data) => {
 

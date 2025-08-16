@@ -10,7 +10,9 @@ export default function Adimission() {
     formState: { errors, isSubmitting },
   } = useForm()
 
-  const url = "http://localhost:3000"
+  // const url = "http://localhost:3000"
+  const url = "https://college-website-beckend.onrender.com"
+
   const [show, setShow] = useState(true)
   const [code, setCode] = useState(0)
 
@@ -23,7 +25,7 @@ export default function Adimission() {
       className: data.class
     }
 
-    const res = await axios.post(`${url}/api/ragistration`, {info})
+    const res = await axios.post(`${url}/api/ragistration`, { info })
     setCode(res.data)
     setTimeout(() => {
       setShow(false)
