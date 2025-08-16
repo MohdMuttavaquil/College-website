@@ -11,6 +11,8 @@ const Payment = () => {
         formState: { errors, isSubmitting },
     } = useForm()
 
+    const url = "http://localhost:3000"
+
     const onSubmit = async (data) => {
 
         const info = {
@@ -20,7 +22,7 @@ const Payment = () => {
             className: data.class
         }
 
-        const res = await axios.post("/api/onlinepay", { info })
+        const res = await axios.post(`${url}/api/onlinepay`, { info })
         onlinepay(res.data)
     }
 
@@ -33,7 +35,7 @@ const Payment = () => {
             description: 'Test Transaction',
             order_id: order.id,
             handler: async function (response) {
-                const res  = await axios.post("/api/verifypay", {
+                const res  = await axios.post(`${url}/api/verifypay`, {
                     order_id: response.razorpay_order_id,
                     payment_id: response.razorpay_payment_id,
                     signature: response.razorpay_signature,
@@ -41,7 +43,7 @@ const Payment = () => {
 
                 if (res.data.success) {
          alert("payment successfull")
-         window.open("/api/receipt", "_blank")
+         window.open(`${url}/api/receipt`, "_blank")
 
          } else {
         alert("Payment verification failed!");
@@ -79,7 +81,7 @@ const Payment = () => {
                     <label>
                         <div className="px-8 mt-2 text-xl">Student Name</div>
                         <input className=" w-[80%] focus:outline-0 text-xl rounded-xl border-b-2 pb-2 border-b-white ml-8 " placeholder="Student Name" type="text" {...register("studentName", { required: true })} />
-                        {errors.fullName && <div className="px-8 text-red-600">This field is required</div>}
+                        {errors.studentName && <div className="px-8 text-red-600">This field is required</div>}
                     </label>
                 </div>
 
