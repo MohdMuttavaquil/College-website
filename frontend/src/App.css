@@ -1,18 +1,18 @@
 .card1 {
-    animation: slideLeft 0.7s ease-out forwards; 
+    animation: slideLeft 0.5s ease-out forwards; 
 }
 
 .card2 {
-    animation: slideUp 0.7s ease-out forwards; 
+    animation: slideUp 0.5s ease-out forwards; 
 }
 
 .card3 {
-   animation: slideDown 0.7s ease-out forwards; 
+   animation: slideDown 0.5s ease-out forwards; 
 }
 
 
 .card4 {
-  animation: slideRight 0.7s ease-out forwards; 
+  animation: slideRight 0.5s ease-out forwards; 
 } 
 
 @keyframes slideLeft {
@@ -72,7 +72,7 @@
 
 .typing{
     width: 50;
-    animation: typing 3s steps(50), .5s;
+    animation: typing 2s steps(50), .5s;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -88,5 +88,5 @@
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn .8s ease-in-out forwards;
 }

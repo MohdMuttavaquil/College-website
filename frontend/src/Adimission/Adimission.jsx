@@ -33,9 +33,9 @@ export default function Adimission() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div>
 
-      <div className={show ? `sm:w-[25rem] fadeIn bg-gray-500 sm:my-10 shadow-2xl shadow-gray-500 sm:rounded-3xl text-white mx-auto` : `hidden`}><div />
+      <div className={show ? `sm:w-[25rem] w-[96%] fadeIn bg-gray-500 my-[5rem] shadow-2xl shadow-gray-500 rounded-3xl text-white mx-auto` : `hidden`}><div />
         <h1 className="pt-8 text-2xl font-bold text-center">Ragistration For Adimission</h1>
         <form className="pt-4" onSubmit={handleSubmit(onSubmit)}>
 

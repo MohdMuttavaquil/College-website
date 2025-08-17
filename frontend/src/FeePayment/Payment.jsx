@@ -44,7 +44,7 @@ const Payment = () => {
                 })
 
                 if (res.data.success) {
-         alert("payment successfull")
+         alert("Open link and download fee recipt")
          window.open(`${url}/api/receipt`, "_blank")
 
          } else {
@@ -67,7 +67,7 @@ const Payment = () => {
     }
 
     return (
-        <div className='sm:w-[80%] mx-auto min-h-screen'>
+        <div className='sm:w-[80%] w-[95%] mx-auto min-h-screen'>
 
             <div className='fadeIn font-[600] md:text-[1.4rem] sm:w-[70%] mt-10 mx-auto'>Secure & Hassle-Free Online Fee Payment</div>
             <div className='fadeIn sm:w-[70%] mt-2 mx-auto'>
